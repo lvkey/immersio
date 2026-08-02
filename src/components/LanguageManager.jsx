@@ -46,7 +46,7 @@ export function LanguageManager({ languages, onAdd, onToggleDormant, onDelete })
               <span
                 className={`flex-1 min-w-0 truncate text-sm ${
                   lang.is_dormant
-                    ? 'text-slate-400 dark:text-white/30 line-through'
+                    ? 'text-slate-500 dark:text-white/60 line-through'
                     : 'text-slate-700 dark:text-white/80'
                 }`}
               >

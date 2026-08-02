@@ -40,7 +40,7 @@ export function LogList({ logs, languagesById, onDelete }) {
               <div className="text-sm font-semibold text-slate-700 dark:text-white/90 tabular-nums">
                 {formatMinutes(log.minutes)}
               </div>
-              <div className="text-xs text-slate-400 dark:text-white/40">{formatShortDate(log.log_date)}</div>
+              <div className="text-xs text-slate-500 dark:text-white/60">{formatShortDate(log.log_date)}</div>
             </div>
             <button
               type="button"

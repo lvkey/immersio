@@ -96,43 +96,45 @@ export default function App() {
       <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
         <PageHeader page={page} onSelectPage={setPage} isDark={isDark} onToggleDark={setIsDark} streak={currentStreak} />
 
-        <div className="text-center max-w-2xl mx-auto space-y-2 pt-2">
-          <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-500 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 rounded-full px-3 py-1">
-            <Sparkles size={13} />
-            Immersio
+        <main className="space-y-6 sm:space-y-8">
+          <div className="text-center max-w-2xl mx-auto space-y-2 pt-2">
+            <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-500 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/10 rounded-full px-3 py-1">
+              <Sparkles size={13} />
+              Immersio
+            </div>
+            <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white/90">
+              Language immersion tracker
+            </h1>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white/90">
-            Language immersion tracker
-          </h1>
-        </div>
 
-        {(authError || error) && (
-          <div className="flex items-center justify-between gap-3 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 text-red-600 dark:text-red-400 rounded-xl px-4 py-3 text-sm">
-            <span>Something went wrong loading your data.</span>
-            <button type="button" onClick={retry} className="flex items-center gap-1.5 font-semibold hover:underline">
-              <RefreshCw size={14} />
-              Retry
-            </button>
-          </div>
-        )}
+          {(authError || error) && (
+            <div className="flex items-center justify-between gap-3 bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 text-red-600 dark:text-red-400 rounded-xl px-4 py-3 text-sm">
+              <span>Something went wrong loading your data.</span>
+              <button type="button" onClick={retry} className="flex items-center gap-1.5 font-semibold hover:underline">
+                <RefreshCw size={14} />
+                Retry
+              </button>
+            </div>
+          )}
 
-        {isBooting ? (
-          <div className="py-16 text-center text-sm text-slate-500 dark:text-white/50">Loading&hellip;</div>
-        ) : page === 'log' ? (
-          <div className="space-y-4">
-            <StreakCard currentStreak={currentStreak} longestStreak={longestStreak} daysLogged={logDates.length} />
-            <LogForm languages={languages} onSubmit={handleAddLog} />
-            <LogList logs={logs} languagesById={languagesById} onDelete={handleDeleteLog} />
-            <LanguageManager
-              languages={languages}
-              onAdd={handleAddLanguage}
-              onToggleDormant={handleToggleDormant}
-              onDelete={handleDeleteLanguage}
-            />
-          </div>
-        ) : (
-          <StatsPage logs={logs} languages={languages} />
-        )}
+          {isBooting ? (
+            <div className="py-16 text-center text-sm text-slate-500 dark:text-white/50">Loading&hellip;</div>
+          ) : page === 'log' ? (
+            <div className="space-y-4">
+              <StreakCard currentStreak={currentStreak} longestStreak={longestStreak} daysLogged={logDates.length} />
+              <LogForm languages={languages} onSubmit={handleAddLog} />
+              <LogList logs={logs} languagesById={languagesById} onDelete={handleDeleteLog} />
+              <LanguageManager
+                languages={languages}
+                onAdd={handleAddLanguage}
+                onToggleDormant={handleToggleDormant}
+                onDelete={handleDeleteLanguage}
+              />
+            </div>
+          ) : (
+            <StatsPage logs={logs} languages={languages} />
+          )}
+        </main>
       </div>
     </div>
   );
