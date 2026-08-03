@@ -103,7 +103,7 @@ export default function App() {
               Immersio
             </div>
             <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 dark:text-white/90">
-              Language immersion tracker
+              Language Immersion Tracker
             </h1>
           </div>
 

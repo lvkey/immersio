@@ -19,19 +19,19 @@ export function StreakCard({ currentStreak, longestStreak, daysLogged }) {
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
       <StatBlock
         icon={Flame}
-        label="Current streak"
+        label="Current Streak"
         value={`${currentStreak} day${currentStreak === 1 ? '' : 's'}`}
         accent="bg-orange-50 dark:bg-orange-500/10 text-orange-500 dark:text-orange-400"
       />
       <StatBlock
         icon={Trophy}
-        label="Longest streak"
+        label="Longest Streak"
         value={`${longestStreak} day${longestStreak === 1 ? '' : 's'}`}
         accent="bg-amber-50 dark:bg-amber-500/10 text-amber-500 dark:text-amber-400"
       />
       <StatBlock
         icon={CalendarCheck}
-        label="Days logged"
+        label="Days Logged"
         value={daysLogged}
         accent="bg-emerald-50 dark:bg-emerald-500/10 text-emerald-500 dark:text-emerald-400"
       />

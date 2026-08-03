@@ -83,17 +83,17 @@ export function StatsPage({ logs, languages }) {
       </div>
 
       <div className="bg-white dark:bg-[#1e1e1e] border border-slate-200 dark:border-white/10 rounded-2xl p-5 shadow-sm">
-        <h2 className="font-semibold text-slate-800 dark:text-white/90 mb-4">Last 14 weeks</h2>
+        <h2 className="font-semibold text-slate-800 dark:text-white/90 mb-4">Last 14 Weeks</h2>
         <ActivityHeatmap minutesByDate={minutesByDate} />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
         <div className="bg-white dark:bg-[#1e1e1e] border border-slate-200 dark:border-white/10 rounded-2xl p-5 shadow-sm">
-          <h2 className="font-semibold text-slate-800 dark:text-white/90 mb-4">Time by language</h2>
+          <h2 className="font-semibold text-slate-800 dark:text-white/90 mb-4">Time by Language</h2>
           <ActivityBarChart data={byLanguage} formatValue={formatMinutes} emptyLabel="No sessions in this range yet." />
         </div>
         <div className="bg-white dark:bg-[#1e1e1e] border border-slate-200 dark:border-white/10 rounded-2xl p-5 shadow-sm">
-          <h2 className="font-semibold text-slate-800 dark:text-white/90 mb-4">Time by activity</h2>
+          <h2 className="font-semibold text-slate-800 dark:text-white/90 mb-4">Time by Activity</h2>
           <ActivityBarChart data={byActivity} formatValue={formatMinutes} emptyLabel="No sessions in this range yet." />
         </div>
       </div>

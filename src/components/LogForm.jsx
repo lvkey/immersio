@@ -34,7 +34,7 @@ export function LogForm({ languages, onSubmit }) {
       onSubmit={handleSubmit}
       className="bg-white dark:bg-[#1e1e1e] border border-slate-200 dark:border-white/10 rounded-2xl p-5 shadow-sm space-y-4"
     >
-      <h2 className="font-semibold text-slate-800 dark:text-white/90">Log a session</h2>
+      <h2 className="font-semibold text-slate-800 dark:text-white/90">Log a Session</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
         <label className="block">
